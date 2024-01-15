@@ -5,24 +5,36 @@
 }
 
 body {
+  margin: 20px;
   font-family: "Darker Grotesque";
-}
-
-.game-container {
-  width: 484px;
-}
-
-.game-panel {
-  background-color: blueviolet;
-}
-
-.game-board {
-  border: 2px solid rgb(0, 23, 50);
-  position: relative;
+  color: rgb(225, 235, 235);
+  font-size: 30px;
+  background-color: rgb(1, 25, 22);
+  padding: 16px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 100px;
+  text-align: center;
+}
+
+/* Classes */
+
+.game-container {
+  padding: px;
+  background-color: rgb(1, 25, 22);
+  text-transform: uppercase;
+  width: 484px;
+}
+1,
+25,
+22 .game-panel {
+}
+
+.game-board {
+  position: relative;
+  border: 2px solid rgb(200, 0, 200);
+  border-radius: 5px;
 }
 
 .score {
@@ -37,7 +49,7 @@ h1 {
 }
 
 .cell {
-  border: 1px solid black;
+  border: 1px solid rgb(200, 0, 200);
   width: 48px;
   height: 48px;
   cursor: pointer;
@@ -45,19 +57,16 @@ h1 {
 
 .end-game-screen {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  background-color: rgba(241, 117, 78, 0.7);
-
+  inset: 0;
+  background-color: rgba(7, 0, 4, 0.9);
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  border-radius: 300px;
+  margin: 20px 5px 20px 5px;
 }
 
 .end-game-text {
@@ -67,10 +76,20 @@ h1 {
 }
 
 .btn {
-  font-size: 24px;
-  font-family: "Darker Grotesque";
   padding: 4px 20px 8px 20px;
-  cursor: pointer;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: "Darker Grotesque";
+  color: black;
   text-transform: uppercase;
-  border: 2px solid rgb(0, 23, 50);
+  border: 2px solid rgb(200, 0, 200);
+}
+
+.btn:hover {
+  background-color: rgb(7, 0, 4);
+  color: rgb(225, 235, 235);
+}
+
+.hidden {
+  display: none;
 }
