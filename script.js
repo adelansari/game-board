@@ -22,11 +22,9 @@ scoreCounter.innerHTML = formatScore();
 
 function updateScore() {
   score++;
-
+  scoreCounter.innerHTML = formatScore();
   if (score === maxScore) {
     endGame(true);
-  } else {
-    scoreCounter.innerHTML = formatScore();
   }
 }
 
