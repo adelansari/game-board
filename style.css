@@ -26,10 +26,6 @@ h1 {
   text-transform: uppercase;
   width: 484px;
 }
-1,
-25,
-22 .game-panel {
-}
 
 .game-board {
   position: relative;
@@ -53,6 +49,11 @@ h1 {
   width: 48px;
   height: 48px;
   cursor: pointer;
+}
+
+.cell-bomb {
+  background-image: url("./images/bomb.png");
+  background-size: contain;
 }
 
 .end-game-screen {
@@ -92,4 +93,12 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.cell-clicked {
+  background-color: rgb(157, 197, 199);
+}
+
+.win {
+  background-color: red;
 }
