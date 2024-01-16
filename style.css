@@ -78,7 +78,8 @@ h1 {
 .end-game-screen {
   position: absolute;
   inset: 0;
-  background-color: rgba(7, 0, 4, 0.8);
+  background-color: rgba(44, 2, 16, 0.8);
+  color: rgb(231, 91, 81);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -136,6 +137,10 @@ h1 {
 
 .cell-clicked {
   background-color: rgb(119, 223, 98);
+}
+
+.cell-clicked-bomb {
+  background-color: rgb(226, 29, 29);
 }
 
 .win {

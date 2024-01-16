@@ -3,12 +3,13 @@ const grid = document.querySelector(".grid");
 const endGameScreen = document.querySelector(".end-game-screen");
 const endGameText = document.querySelector(".end-game-text");
 const playAgainButton = document.querySelector(".play-again");
+const healthCounter = document.querySelector(".health-counter");
 
 const totalCells = 100;
 const totalBombs = 40;
 const maxScore = 10;
 const bombsList = [];
-const health = 3;
+let health = 3;
 
 let score = 0;
 function formatScore() {
@@ -36,10 +37,20 @@ for (let i = 1; i <= totalCells; i++) {
   cell.addEventListener("click", function () {
     if (bombsList.includes(i)) {
       cell.classList.add("cell-bomb");
+      health--; // reduce health on click
+      console.log(health);
+      healthCounter.innerHTML = health.toString();
+      cell.classList.add("cell-clicked-bomb");
+    }
+
+    if (health === 0) {
       endGame(false);
     }
 
-    cell.classList.add("cell-clicked");
+    if (!bombsList.includes(i)) {
+      cell.classList.add("cell-clicked");
+    }
+
     updateScore();
   });
 
