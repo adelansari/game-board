@@ -20,10 +20,15 @@
   <body>
     <div class="game-container">
       <header class="game-panel">
-        <h1>Game Board</h1>
+        <h1 class="text-glow">Game<br />Board</h1>
         <div class="score">
           <span class="score-label">SCORE</span>
-          <span class="score-counter">00000</span>
+          <span class="score-counter">000</span>
+        </div>
+
+        <div class="health">
+          <span class="health-label">Health</span>
+          <span class="health-counter">3</span>
         </div>
       </header>
       <main class="game-board">
@@ -31,7 +36,7 @@
 
         <div class="end-game-screen hidden">
           <h2 class="end-game-text">Game<br />Over</h2>
-          <button class="btn">Play Again</button>
+          <button class="btn play-again">Play Again</button>
         </div>
       </main>
     </div>

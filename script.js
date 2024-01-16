@@ -2,20 +2,30 @@ const scoreCounter = document.querySelector(".score-counter");
 const grid = document.querySelector(".grid");
 const endGameScreen = document.querySelector(".end-game-screen");
 const endGameText = document.querySelector(".end-game-text");
+const playAgainButton = document.querySelector(".play-again");
 
 const totalCells = 100;
-const totalBombs = 3;
-const maxScore = 5;
+const totalBombs = 40;
+const maxScore = 10;
 const bombsList = [];
+const health = 3;
 
 let score = 0;
+function formatScore() {
+  return `${score.toString().padStart(3, "0")}/${maxScore
+    .toString()
+    .padStart(3, "0")}`;
+}
+// initializing the score
+scoreCounter.innerHTML = formatScore();
 
 function updateScore() {
   score++;
-  scoreCounter.innerHTML = score.toString().padStart(5, "0");
 
   if (score === maxScore) {
-    endGame(false);
+    endGame(true);
+  } else {
+    scoreCounter.innerHTML = formatScore();
   }
 }
 
@@ -26,7 +36,7 @@ for (let i = 1; i <= totalCells; i++) {
   cell.addEventListener("click", function () {
     if (bombsList.includes(i)) {
       cell.classList.add("cell-bomb");
-      endGame();
+      endGame(false);
     }
 
     cell.classList.add("cell-clicked");
