@@ -7,7 +7,7 @@ const playAgainButton = document.querySelector(".play-again");
 const healthCounter = document.querySelector(".health-counter");
 
 const totalCells = 100;
-const totalBombs = 20;
+const totalBombs = 25;
 const maxScore = 10;
 const bombsList = [];
 let health = 3;
