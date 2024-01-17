@@ -137,10 +137,12 @@ h1 {
 
 .cell-clicked {
   background-color: rgb(119, 223, 98);
+  cursor: not-allowed;
 }
 
 .cell-clicked-bomb {
   background-color: rgb(226, 29, 29);
+  cursor: not-allowed;
 }
 
 .win {

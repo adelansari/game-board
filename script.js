@@ -38,7 +38,10 @@ for (let i = 1; i <= totalCells; i++) {
   cell.classList.add("cell");
 
   cell.addEventListener("click", function () {
-    if (bombsList.includes(i)) {
+    if (
+      bombsList.includes(i) &&
+      !cell.classList.contains("cell-clicked-bomb")
+    ) {
       cell.classList.add("cell-bomb");
       health--; // reduce health on click
       console.log(health);
@@ -55,7 +58,11 @@ for (let i = 1; i <= totalCells; i++) {
       endGame(false);
     }
 
-    if (!bombsList.includes(i)) {
+    if (
+      !bombsList.includes(i) &&
+      !cell.classList.contains("cell-clicked") &&
+      !cell.classList.contains("cell-clicked-bomb")
+    ) {
       cell.classList.add("cell-clicked");
       updateScore();
     }
