@@ -147,3 +147,10 @@ h1 {
   background-color: rgba(7, 0, 4, 0.9);
   color: rgb(4, 255, 100);
 }
+
+.health-counter,
+.score-counter {
+  transition: color 0.5s, transform 0.5s;
+  text-align: right;
+  margin-left: auto;
+}
